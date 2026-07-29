@@ -19,10 +19,12 @@ class BaseRepository:
 
     def create(self, obj):
         self.db.add(obj)
-        self.db.commit()
-        self.db.refresh(obj)
+        self.db.flush()      # <-- changed
         return obj
+
+    def update(self):
+        self.db.flush()
 
     def delete(self, obj):
         self.db.delete(obj)
-        self.db.commit()
+        self.db.flush()
