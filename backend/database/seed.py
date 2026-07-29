@@ -14,6 +14,9 @@ from models.evidence import Evidence
 from models.recovery_case import RecoveryCase
 from models.audit_log import AuditLog
 
+from models.user import User
+from models.enums import UserRole
+
 from models.enums import (
     ContractStatus,
     IncidentSeverity,
